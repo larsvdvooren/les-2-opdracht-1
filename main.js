@@ -5,12 +5,8 @@ import { setupCounter } from './counter.js'
 
 document.querySelector('#app').innerHTML = `
   <div>
-    <a href="https://vitejs.dev" target="_blank">
       <img src="${viteLogo}" class="logo" alt="Vite logo" />
-    </a>
-    <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank">
       <img src="${javascriptLogo}" class="logo vanilla" alt="JavaScript logo" />
-    </a>
     <h1>Hello Vite!</h1>
     <div class="card">
       <button id="counter" type="button"></button>
@@ -22,3 +18,33 @@ document.querySelector('#app').innerHTML = `
 `
 
 setupCounter(document.querySelector('#counter'))
+
+const viteLogoImg = document.querySelector('.logo')
+const jsLogoImg = document.querySelector('.logo.vanilla')
+let rotationAngle = 0; //heb er maar 1, moet ze koppelen aan ieder logo
+
+viteLogoImg.addEventListener('click', function () {
+  rotate(viteLogoImg);
+  console.log("viteRotate");
+});
+
+jsLogoImg.addEventListener('click', function () {
+  rotate(jsLogoImg);
+  console.log("jsRotate");
+}
+);
+
+
+function rotate(object) {
+  //object.setAttribute("style", "transform rotate(90deg)");
+  rotationAngle = (rotationAngle + 90) % 360;
+  object.style.transform = `rotate(${rotationAngle}deg)`;;
+  //document.getElementById(object).style.transform = "rotate(90deg)";
+}
+
+
+
+//document.getElementById("jsLogoImg").style.transform =  "rotate(-90deg)";
+
+// viteLogo.onclick = document.getElementById("viteLogo").style.transform = "rotate(90deg)";
+// jsLogo.onclick = document.getElementById("jsLogo").style.transform = "rotate(-90deg)";

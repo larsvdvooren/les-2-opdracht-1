@@ -42,6 +42,49 @@ function rotate(object) {
   //document.getElementById(object).style.transform = "rotate(90deg)";
 }
 
+// fetch(
+//   "https://raw.githubusercontent.com/larsvdvooren/les-2-opdracht-1/master/style.css"
+// )
+// .then(response => response.text())
+// .then(text => {
+//   console.log(text)
+// });
+
+// fetch(
+//   "https://raw.githubusercontent.com/bpesquet/thejsway/master/resources/languages.txt"
+// )
+// .catch(err => {
+//   console.error(err.message);
+// })
+
+// .then (function(response) {
+//   return response.text();
+// })
+// .then( language =>
+
+//   language.forEach(
+//   //console.log(html)
+//   `<h2>A few programming languages</h2>
+// <ul id='languageList'>
+// <th
+// </ul>`
+//   ));
+// // .then(response => response.text())
+// .then(html => {
+//   return response.text();
+  // const parser = new DOMParser()
+
+  // const doc = parser.parseFromString(html, "text/html")
+
+  // console.log(doc)
+// }
+
+//   )
+
+
+
+
+
 
 
 //document.getElementById("jsLogoImg").style.transform =  "rotate(-90deg)";
